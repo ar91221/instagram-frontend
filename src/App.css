@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-box {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px 40px 20px;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 10px;
+
+  /* Instagram style shadow */
+  box-shadow: 1px 3px 20px rgb(64, 199, 145);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 1px 3px 15px rgb(234, 78, 151);
+  border-radius: 10px;
+}
+
+.logo h1 {
+  font-family: 'Billabong', cursive;
+  font-size: 48px;
+  font-weight: normal;
+  color: #262626;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box input {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 12px 10px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  box-shadow: 1px 3px 10px rgb(137, 90, 236);
+
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #a8a8a8;
+}
+
+.login-box button {
+  background: #0095f6;
   color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 1px 3px 15px rgb(250, 128, 72);
+
 }
 
-.App-link {
-  color: #61dafb;
+.login-box button:hover:not(:disabled) {
+  background: #0077cc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.login-box button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin-top: 15px;
+  padding: 10px;
+  background: #ffefef;
+  border-radius: 4px;
+}
+
+.error-message p {
+  color: #ed4956;
+  font-size: 14px;
+  text-align: center;
+}
+
+.debug-info {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #333;
+}
+
+.debug-toggle {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.debug-toggle button {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.signup-prompt {
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #dbdbdb;
+  padding-top: 20px;
+}
+
+.signup-prompt p {
+  font-size: 14px;
+  color: #262626;
+}
+
+.signup-prompt a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.app-store {
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.app-store p {
+  font-size: 14px;
+  color: #262626;
+  margin-bottom: 15px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.store-buttons button {
+  background: #262626;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .login-box {
+    padding: 20px 20px 15px;
+    background: transparent;
+    border: none;
   }
 }
