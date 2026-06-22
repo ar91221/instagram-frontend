@@ -17,7 +17,7 @@ function App() {
     setDebugInfo(null);
 
     try {
-      const response = await axios.post('http://instagram-backend-ivms.onrender.com/api/auth/login', {
+      const response = await axios.post('https://instagram-backend-ivms.onrender.com/api/auth/login', {
         username,
         password
       });
